@@ -22,3 +22,6 @@ uvicorn src.api.app:app --reload --port 8000
 - Conducted optimization experiments: learning rate, batch size, regularization.
 - Deployed model as a FastAPI service (Docker + Kubernetes) and added Prometheus/Grafana monitoring.
 
+
+[ci] trigger: 2025-11-21 03:02:35Z
+
