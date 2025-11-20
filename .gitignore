@@ -1,0 +1,29 @@
+﻿# Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Artifacts and model files
+artifacts/
+*.joblib
+*.npy
+
+# Local config / env
+.env
+project_root.pth
+sitecustomize.py
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
