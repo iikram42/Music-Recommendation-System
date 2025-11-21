@@ -85,23 +85,27 @@ Kubernetes:
     - "curl http://127.0.0.1:8080/recommend/1"
 
 Architecture_diagram: |
+
   +-------------------------+
   |   FastAPI Microservice  |
   |   /health  /recommend   |
   +------------+------------+
                |
                v
+               
   +-------------------------+
   |  Matrix Factorization   |
   |     (P, Q Embeddings)   |
   +------------+------------+
                |
                v
+               
   +-------------------------+
   |       Docker Image      |
   +------------+------------+
                |
                v
+               
   +---------------------------------------------+
   |           Kubernetes Deployment             |
   |  - Readiness/Liveness Probes                |
@@ -109,9 +113,11 @@ Architecture_diagram: |
   +-------------------+-------------------------+
                        |
                        v
+                       
   +-------------------------+
   |   ClusterIP Service     |
   +-------------------------+
+
 
 Project_structure: |
   .
