@@ -1,10 +1,12 @@
-title: "Music Recommendation System — Research + Engineering Edition"
-description: >
+[README.md](https://github.com/user-attachments/files/23684158/README.md)
+Music Recommendation System — Research + Engineering Edition
+
+Description: 
   A research-driven recommendation microservice built with FastAPI and Matrix
   Factorization (MF). This document embeds theoretical notes, training analysis,
   dataset snapshots, architecture diagrams, and practical run/deploy instructions.
 
-sections:
+Sections:
 
   research_motivation: |
     User–item matrices used in recommendation systems are almost always:
@@ -47,7 +49,7 @@ sections:
       - artifacts/recon_error.png
       - artifacts/latent_drift.png
 
-  architecture_diagram: |
+  Architecture_diagram: |
       +-------------------------+
       |   FastAPI Microservice  |
       |   /health  /recommend   |
@@ -73,7 +75,7 @@ sections:
       |   ClusterIP Service     |
       +-------------------------+
 
-  project_structure: |
+  Project_structure: |
     .
     ├── src/
     │   ├── api/app.py
@@ -92,7 +94,6 @@ sections:
     ├── .github/workflows/ci-cd.yml
     └── README.md
 
-metadata:
-  authors: ["iikram42"]
-  license: "MIT"
-  suggested_readme_file: "README.md"
+Metadata:
+  authors: iikram42
+  license: MIT
