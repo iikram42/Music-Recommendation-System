@@ -1,4 +1,4 @@
-Music Recommendation System
+Music Recommendation System 
 
 Summary: 
   A reproducible end-to-end Matrix Factorization (MF) based recommendation system
@@ -43,14 +43,14 @@ Features:
     folder: "tests/"
     description: "Pytest-based tests verifying MF shapes, decreasing loss, and API behavior."
 
-recommended_artifacts:
+Recommended_artifacts:
   - "artifacts/loss.png"
   - "artifacts/gradient_norm.png"
   - "artifacts/latent_drift.png"
   - "artifacts/sample_data.csv (processed preview only)"
   - "artifacts/model.joblib (optional, excluded via .gitignore)"
 
-quick_start:
+Quick_start:
   prerequisites:
     - "Python 3.11+"
     - "Docker"
@@ -84,7 +84,7 @@ Kubernetes:
     - "curl http://127.0.0.1:8080/health"
     - "curl http://127.0.0.1:8080/recommend/1"
 
-architecture_diagram: |
+Architecture_diagram: |
   +-------------------------+
   |   FastAPI Microservice  |
   |   /health  /recommend   |
