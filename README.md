@@ -1,27 +1,24 @@
-# Optimization-Driven Music Recommendation System
+﻿# Music Recommendation System
 
-Matrix Factorization · Sparse Data · Convergence Analysis · MLOps Pipeline · Kubernetes · GitOps
+A FastAPI-based recommendation microservice packaged with Docker and deployable to Kubernetes.
 
-See `notebooks/03_optimization_analysis.ipynb` for exploratory analysis and `src/` for runnable code.
+## Features
+- /health endpoint
+- /recommend/{user_id} endpoint
+- Dockerfile (Python 3.11-slim)
+- Kubernetes deployment (readiness/liveness probes)
+- GitHub CI/CD workflow
+- Clean project structure
 
-## Quickstart (local)
+## Run Locally
+docker build -t iikram42/music-recommendation-system:latest .
+docker run --rm -p 8000:8000 iikram42/music-recommendation-system:latest
 
-```bash
-git clone <your-repo-url>
-cd music-recommender-mlops
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python src/train/train.py --epochs 10
-uvicorn src.api.app:app --reload --port 8000
-```
+## Test
+curl http://127.0.0.1:8000/health
+curl http://127.0.0.1:8000/recommend/1
 
-## What to include in your CV / LOM
-
-- Built a matrix-factorization recommender on sparse user–item data.
-- Conducted optimization experiments: learning rate, batch size, regularization.
-- Deployed model as a FastAPI service (Docker + Kubernetes) and added Prometheus/Grafana monitoring.
-
-
-[ci] trigger: 2025-11-21 03:02:35Z
+## Kubernetes
+kubectl apply -f k8s/deployment.yaml
+kubectl port-forward svc/recommender-service 8080:80
 
